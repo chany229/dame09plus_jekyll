@@ -10,3 +10,8 @@ github_username:  chany229
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+
+
+# for plugins
+exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md']
