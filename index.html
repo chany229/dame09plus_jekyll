@@ -1,20 +1,1279 @@
 ---
-layout: default
+layout: nil
 ---
 
-<div class="home">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ site.title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8; text/x-component;" />
+    <style type="text/css">
+    html {
+        margin: 0 auto;
+        height: 100%;
+        padding: 0;
+    }
+    body {
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        height: 100%;
+        font-size: 12px;
+        font-family: 'microsoft yahei';
+        color: #900;
+    }
+    span {
+        color: #f36;
+        display: inline;
+    }
+    a {
+        color: #f03;
+        text-decoration: none;
+    }
+    #main {
+        margin: 0 auto;
+        width: 320px;
+        height: 100%;
+        /*vertical-align: middle;
+        padding-top: 160px;*/
+        /*
+        border-image: url(/img/border3.png) 0 15 0 15   /0 15px repeat repeat;
+        -moz-border-image: url(/img/border3.png) 0 15 0 15   /0 15px repeat repeat;
+        -o-border-image: url(/img/border3.png) 0 15 0 15   /0 15px repeat repeat;
+        -webkit-border-image: url(/img/border3.png) 0 15 0 15   /0 15px repeat repeat;
+        behavior: url(/PIE_1.0.0/PIE.htc);
+        */
+    }
+    .border {
+        float: left;
+        height: 100%;
+        background-image: url(/img/border1.png);
+        width: 15px;
+        margin: 0 5px; 
+    }
+    #content {
+        float: left;
+        width: 270px;
+        padding-top: 80px;
+    }
+    #notice {
+        /*font-size: 10px;*/
+        font-weight: bolder;
+        padding-top: 12px;
+    }
+    .links {
+        font-size: 10px;
+        padding-top: 20px;
+    }
 
-  <h1>Posts</h1>
+    .qr_code {
+        width: 165px;
+        margin: 30px auto 0;
+        padding-bottom: 30px;
+    }
 
-  <ul class="posts">
-    {% for post in site.tags["测试"] %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+    table {
+        border-width: 0;
+        border-style: none;
+        border-color: #0000ff;
+        border-collapse: collapse;
+    }
+    td {
+        border-width: 0;
+        border-style: none;
+        border-color: #0000ff;
+        border-collapse: collapse;
+        padding: 0;
+        margin: 0;
+        width: 5px;
+        height: 5px;
+    }
+    td.black { background-color: #f36; }
+    td.white { background-color: #fff; }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="border"></div>
+        <div id="content">
+            <img alt="Banner" src="/img/banner.png" />
+            <br/>
+            一个个人日记站=L=
+            <br/>
+            对<span>二次元</span>、<span>再创作</span>等词汇不明或反感者请<span>全速脱出</span>
+            <div id="notice">
+                本站内容与原作者、制作公司、历史人物等无关
+                <br/>
+                特此声明
+            </div>
+            <div class="links">
+                <a href="{{ "/default" | prepend: site.baseurl }}">默认入口</a>
+                <div>暂时不支持IE浏览器=L=</div>
+            </div>
+            <div class="qr_code">
+                <table>
+                    <tr>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                    </tr>
+                    <tr>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                    </tr>
+                    <tr>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                    </tr>
+                    <tr>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                    </tr>
+                    <tr>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                    </tr>
+                    <tr>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                    </tr>
+                    <tr>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                    </tr>
+                    <tr>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                    </tr>
+                    <tr>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                    </tr>
+                    <tr>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                    </tr>
+                    <tr>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                    </tr>
+                    <tr>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                    </tr>
+                    <tr>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                    </tr>
+                    <tr>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                    </tr>
+                    <tr>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                    </tr>
+                    <tr>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                    </tr>
+                    <tr>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                    </tr>
+                    <tr>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                    </tr>
+                    <tr>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                    </tr>
+                    <tr>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                    </tr>
+                    <tr>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                    </tr>
+                    <tr>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                    </tr>
+                    <tr>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                    </tr>
+                    <tr>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                    </tr>
+                    <tr>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                    </tr>
+                    <tr>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                    </tr>
+                    <tr>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                    </tr>
+                    <tr>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                    </tr>
+                    <tr>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                    </tr>
+                    <tr>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                    </tr>
+                    <tr>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                    </tr>
+                    <tr>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                    </tr>
+                    <tr>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="white"/>
+                        <td class="black"/>
+                        <td class="black"/>
+                        <td class="white"/>
+                    </tr>
+                </table>
+                <div>↑ 手机访问二维码 ↑</div>
+            </div>
+        </div>
+        <div class="border"></div>
+    </div>
+</body>
+</html>
