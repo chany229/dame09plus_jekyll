@@ -20,7 +20,7 @@ task :publish => [:generate] do
     tmp = "../tmp"
     system "git add -A"
     system "git commit -a -m '.'"
-    system "git push"
+    system "git push origin master"
     system "mv _site/* #{tmp}"
     system "git checkout -B gh-pages"
     system "rm -rf *.* css _*"
