@@ -8,7 +8,7 @@ config(['$routeProvider', function($routeProvider) {
         controller: LoadCtrl
     }).
     otherwise({
-        redirectTo: 'default/'
+        redirectTo: '/dame09plus_jekyll/default/'
     });
 }])
 var SideCtrl = ['$scope', '$location', function($scope, $location) {
