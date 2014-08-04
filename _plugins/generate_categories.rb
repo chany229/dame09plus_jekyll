@@ -159,7 +159,7 @@ module Jekyll
 
     # Loops through the list of category pages and processes each one.
     def write_category_indexes
-      if self.layouts.key? 'category_index'
+      if self.layouts.key? 'category'
         self.categories.keys.each do |category|
           self.write_category_index(category)
         end
