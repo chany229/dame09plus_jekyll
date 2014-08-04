@@ -1,0 +1,32 @@
+<div class="block" id="notice">
+    各种功能测试中，欢迎亲友们用力践踏！<%#= AppConfig.notice %>
+</div>
+<div id="entries">
+    <%= render "entries.html.erb" %>
+</div>
+<div id="filters">
+    <div id="calendar" class="block">
+        <%= render "calendar", :date => @calendar_date, :events => @calendar_events %>
+    </div>
+    <div id="keyword" class="block">
+        <%= form_tag '/logs/keyword', :method => 'get', :remote => true do %>
+        <%= text_field_tag 'keyword', params[:keyword] || '', :id => "", :placeholder => "请输入关键词" %>
+        <input type="submit" value="搜索" class="btn" />
+        <% end %>
+    </div>
+    <div id="tags" class="block">
+        <% @tags.each do |tag| %>
+        <span style="font-size: <%= tag[:count]/10.0 + 0.7 %>em;">
+            <%= link_to tag[:name], "#/logs/tag/#{tag[:name]}" %>(<%= tag[:count] %>)
+        </span>
+        <% end %>
+    </div>
+</div>
+<div class="clear"></div>
+<script type="text/javascript">
+(function($){
+    $('.entry').highlight(['<%= params[:keyword] %>']);
+    //$('.colorpicker').colorpicker();
+})(jQuery)
+init_zoom_image();
+</script>

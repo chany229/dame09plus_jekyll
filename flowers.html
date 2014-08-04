@@ -1,0 +1,33 @@
+---
+layout: none
+permalink: /flowers/
+---
+<!DOCTYPE html>
+<html>
+
+{% include flowers_head.html %}
+
+<body>
+
+  <div id="container">
+    {% include flowers_header.html %}
+
+    {% include side.html %}
+
+    <div id="content">
+      <div class="block" id="notice">
+        各种功能测试中，欢迎亲友们用力践踏！
+      </div>
+      <div class="entries">
+        <div ng-controller="LoadPageCtrl" ng-show="isViewLoading" class="loading"></div>
+        <div ng-view></div>
+      </div>
+
+      {% include filters.html %}
+      <div class="clear"></div>
+    </div>
+
+    {% include flowers_footer.html %}
+  </div>
+</body>
+</html>
