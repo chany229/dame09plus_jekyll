@@ -22,7 +22,7 @@ var SideCtrl = ['$scope', '$location', function($scope, $location) {
         }
     }
 }];
-var LoadingCtrl = ['$scope', '$rootScope', '$location', function($scope, $rootScope, $location) {
+var LoadPageCtrl = ['$scope', '$rootScope', '$location', function($scope, $rootScope, $location) {
     $scope.isViewLoading = false;
     $scope.$on('$locationChangeStart', function(event, next, current) {
         console.log('location change');
@@ -36,7 +36,7 @@ var LoadingCtrl = ['$scope', '$rootScope', '$location', function($scope, $rootSc
         $scope.isViewLoading = false;
         if (error.status = 401) {
             alert(error.data);
-            window.location = '/users/sign_in';
+            window.location = '/';
         }
     });
 
