@@ -20,7 +20,7 @@ task :publish => [:generate] do
     tmp = "../tmp"
     system "mv _site/* #{tmp}"
     system "git checkout -B gh-pages"
-    system "rm -rf *"
+    system "rm -rf *.* css _*"
     system "mv #{tmp}/* ."
     message = "Site updated at #{Time.now.utc}"
     system "git add ."
