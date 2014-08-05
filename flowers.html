@@ -21,6 +21,7 @@ permalink: /flowers/
       <div class="entries">
         <div ng-controller="LoadPageCtrl" ng-show="isViewLoading" class="loading"></div>
         <div ng-view></div>
+        {{ 1+2 }}
       </div>
 
       {% include filters.html %}
@@ -29,5 +30,8 @@ permalink: /flowers/
 
     {% include flowers_footer.html %}
   </div>
+  <script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+  <script src="http://cdn.bootcss.com/angular.js/1.2.0rc2/angular.min.js"></script>
+  <script src="{{ "/js/new_my_angular.js" | prepend: site.baseurl }}" type="text/javascript"></script>
 </body>
 </html>
