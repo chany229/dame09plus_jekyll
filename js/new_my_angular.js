@@ -4,7 +4,7 @@ angular.module('my_routes', []).
 config(['$routeProvider', function($routeProvider) {
     $routeProvider.
     when("/:path", {
-        template: has_loading_template,
+        templateUrl: "/{{path}}",
         controller: LoadCtrl
     }).
     otherwise({
