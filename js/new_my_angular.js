@@ -35,8 +35,8 @@ var LoadPageCtrl = ['$scope', '$rootScope', '$location', function($scope, $rootS
     $scope.$on('$routeChangeError', function(event, next, current, error) {
         $scope.isViewLoading = false;
         if (error.status = 401) {
-            alert(error.data);
-            window.location = '/';
+            console.log(error.data);
+            //window.location = '/';
         }
     });
 
