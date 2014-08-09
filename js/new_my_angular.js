@@ -3,7 +3,7 @@ var has_loading_template = '<div ng-include src="templateUrl"><div class="loadin
 angular.module('my_routes', []).
 config(['$routeProvider', function($routeProvider) {
     $routeProvider.
-    when("/:path", {
+    when(":path", {
         template: has_loading_template,
         controller: LoadCtrl
     }).
@@ -47,5 +47,5 @@ var LoadPageCtrl = ['$scope', '$rootScope', '$location', function($scope, $rootS
 var LoadCtrl = ['$scope', '$routeParams', '$templateCache', function($scope, $routeParams, $templateCache) {
     $templateCache.removeAll();
     var path = $routeParams.path;
-    $scope.templateUrl = '/' + path;
+    $scope.templateUrl = path;
 }];
