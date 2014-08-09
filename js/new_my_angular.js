@@ -23,6 +23,14 @@ config(['$routeProvider', function($routeProvider) {
         template: has_loading_template,
         controller: LoadCtrl
     }).
+    when("/:path1/:path2/:path3/:path4/:path5/:path6", {
+        template: has_loading_template,
+        controller: LoadCtrl
+    }).
+    when("/:path1/:path2/:path3/:path4/:path5/:path6/:path7", {
+        template: has_loading_template,
+        controller: LoadCtrl
+    }).
     otherwise({
         redirectTo: '/dame09plus_jekyll/default/'
     });
@@ -67,7 +75,13 @@ var LoadCtrl = ['$scope', '$routeParams', '$templateCache', function($scope, $ro
     var path3 = $routeParams.path3;
     var path4 = $routeParams.path4;
     var path5 = $routeParams.path5;
-    if (path5) {
+    var path6 = $routeParams.path6;
+    var path7 = $routeParams.path7;
+    if (path7) {
+        $scope.templateUrl = '/' + path1 + '/'+ path2 + '/' + path3 + '/' + path4 + '/' + path5 + '/' + path6 + '/' + path7;
+    } else if (path6) {
+        $scope.templateUrl = '/' + path1 + '/'+ path2 + '/' + path3 + '/' + path4 + '/' + path5 + '/' + path6;
+    } else if (path5) {
         $scope.templateUrl = '/' + path1 + '/'+ path2 + '/' + path3 + '/' + path4 + '/' + path5;
     } else if (path4) {
         $scope.templateUrl = '/' + path1 + '/'+ path2 + '/' + path3 + '/' + path4;
