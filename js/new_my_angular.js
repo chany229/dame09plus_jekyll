@@ -3,7 +3,23 @@ var has_loading_template = '<div ng-include src="templateUrl"><div class="loadin
 angular.module('my_routes', []).
 config(['$routeProvider', function($routeProvider) {
     $routeProvider.
-    when(":path", {
+    when("/:path1", {
+        template: has_loading_template,
+        controller: LoadCtrl
+    }).
+    when("/:path1/:path2", {
+        template: has_loading_template,
+        controller: LoadCtrl
+    }).
+    when("/:path1/:path2/:path3", {
+        template: has_loading_template,
+        controller: LoadCtrl
+    }).
+    when("/:path1/:path2/:path3/:path4", {
+        template: has_loading_template,
+        controller: LoadCtrl
+    }).
+    when("/:path1/:path2/:path3/:path4/:path5", {
         template: has_loading_template,
         controller: LoadCtrl
     }).
@@ -46,6 +62,21 @@ var LoadPageCtrl = ['$scope', '$rootScope', '$location', function($scope, $rootS
 }];
 var LoadCtrl = ['$scope', '$routeParams', '$templateCache', function($scope, $routeParams, $templateCache) {
     $templateCache.removeAll();
-    var path = $routeParams.path;
-    $scope.templateUrl = path;
+    var path1 = $routeParams.path1;
+    var path2 = $routeParams.path2;
+    var path3 = $routeParams.path3;
+    var path4 = $routeParams.path4;
+    var path5 = $routeParams.path5;
+    if (path5) {
+        $scope.templateUrl = '/' + path1 + '/'+ path2 + '/' + path3 + '/' + path4 + '/' + path5;
+    } else if (path4) {
+        $scope.templateUrl = '/' + path1 + '/'+ path2 + '/' + path3 + '/' + path4;
+    } else if (path3) {
+        $scope.templateUrl = '/' + path1 + '/'+ path2 + '/' + path3;
+    } else if (path2) {
+        $scope.templateUrl = '/' + path1 + '/'+ path2;
+    } else {
+        $scope.templateUrl = '/' + path1;
+    }
+        
 }];
