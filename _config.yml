@@ -15,3 +15,4 @@ permalink: pretty
 
 # for plugins
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md']
+gems: ['jekyll-sass']
