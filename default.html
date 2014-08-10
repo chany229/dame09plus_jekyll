@@ -11,7 +11,7 @@ permalink: /default/
 		</div>
 		<div class="right">
 			{% for tag in post.tags %}
-			<a>{{ tag.name }}</a>
+			<a>{{ tag }}</a>
 			{% endfor %} |
 			{{ post.date | date: "%b %-d, %Y" }} |
 			评论功能尚未开启

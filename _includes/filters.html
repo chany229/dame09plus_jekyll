@@ -1,6 +1,13 @@
 
 <div id="filters">
+	<div id="categories" class="block">
+		{% for category in site.categories %}
+		{{ category }}
+		{% endfor %}
+	</div>
     <div id="tags" class="block">
-        
+        {% for tag in site.tags %}
+        <span style="font-size: {{ tag[1].size/10.0 + 0.7 }}em;"><a>{{ tag[0] }}</a>({{ tag[1].size }})</span>
+        {% endfor %}
     </div>
 </div>
