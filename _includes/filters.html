@@ -1,9 +1,11 @@
 
 <div id="filters">
 	<div id="categories" class="block">
-		{% for category in site.categories %}
-		{{ category }}
-		{% endfor %}
+		<ul>
+			{% for category in site.categories %}
+			<li><a href="{{ category[0] | prepend: '#/dame09plus_jekyll/' }}">{{ category[0] }}</a>({{ category[1] }})</li>
+			{% endfor %}
+		</ul>
 	</div>
     <div id="tags" class="block">
         {% for tag in site.tags %}
