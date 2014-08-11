@@ -20,7 +20,9 @@ permalink: /flowers/
       </div>
       <div id="entries">
         <div ng-controller="LoadPageCtrl" ng-show="isViewLoading" class="loading"></div>
-        <div ng-view></div>
+        <div ng-view>
+          <div class="block entry">
+        </div>
       </div>
 
       {% include filters.html %}
