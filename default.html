@@ -2,7 +2,7 @@
 layout: none
 permalink: /default/
 ---
-{% for post in paginator.posts#.tags["测试"] %}
+{% for post in paginator.posts %}
 <div class="block entry" id="entry_<%= entry.id %>">
 	{{ post.title }}
 	<div class="entry_links">
