@@ -1,15 +1,23 @@
 ---
 layout: nil
 ---
-<div class="post">
+<div class="block entry">
+    {{ page.title }}
+    <div class="entry_links">
+        <div class="left">
+            <a href="{{ post.url | prepend: '#' }}">阅读全文</a>
+        </div>
+        <div class="right">
+            {% for tag in page.tags %}
+            <a>{{ tag }}</a>
+            {% endfor %} |
+            {{ page.date | date: "%b %-d, %Y" }} |
+            评论功能尚未开启
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
 
-  <header class="post-header">
-    <h1>{{ page.title }}</h1>
-    <p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
-
-  <article class="post-content">
-  {{ content }}
-  </article>
-
+<div class="block entry">
+    {{ content }}
 </div>
