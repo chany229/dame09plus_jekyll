@@ -334,11 +334,21 @@ p.notice, p.alert {
     border-color: $purple;
   }
 }
-.entry {
+.block.entry {
   width: 470px;
   padding: 10px 10px 0;
   margin: 0 0 10px;
   color: $lemon;
+}
+.block.title {
+  width: 470px;
+  padding: 10px;
+  color: $lemon; 
+}
+.block.content {
+  width: 470px;
+  padding: 10px;
+  color: $yellow;
 }
 .article, .comments {
   padding: 0 0 10px;
