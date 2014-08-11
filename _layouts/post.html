@@ -1,23 +1,20 @@
 ---
 layout: nil
 ---
-<div class="block entry">
-    {{ page.title }}
-    <div class="entry_links">
-        <div class="left">
-            <a href="{{ post.url | prepend: '#' }}">阅读全文</a>
-        </div>
-        <div class="right">
-            {% for tag in page.tags %}
-            <a>{{ tag }}</a>
-            {% endfor %} |
-            {{ page.date | date: "%b %-d, %Y" }} |
-            评论功能尚未开启
-        </div>
-        <div class="clear"></div>
+<div class="block">
+    <div class="left">
+        {{ page.title }}
     </div>
+    <div class="right">
+        {% for tag in page.tags %}
+        <a>{{ tag }}</a>
+        {% endfor %} |
+        {{ page.date | date: "%b %-d, %Y" }} |
+        评论功能尚未开启
+    </div>
+    <div class="clear"></div>
 </div>
 
-<div class="block entry">
+<div class="block">
     {{ content }}
 </div>
