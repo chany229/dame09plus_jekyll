@@ -32,7 +32,7 @@ config(['$routeProvider', function($routeProvider) {
         controller: LoadCtrl
     }).
     otherwise({
-        redirectTo: '/default/'
+        redirectTo: '/list/'
     });
 }])
 var SideCtrl = ['$scope', '$location', function($scope, $location) {
