@@ -2,7 +2,7 @@
 layout: none
 permalink: /default/
 ---
-{% for post in site.tags["测试"] %}
+{% for post in paginator.posts#.tags["测试"] %}
 <div class="block entry" id="entry_<%= entry.id %>">
 	{{ post.title }}
 	<div class="entry_links">
@@ -22,6 +22,19 @@ permalink: /default/
 {% endfor %}
 <div id="logs_info">
 	<!--div id="filter_info">过滤条件:</div-->
-	<!--div id="total_info">共有 条日志</div-->
+	<div id="total_info">共有{{ site.posts.count }}条日志</div>
+	<div class="pagination">
+		{% if paginator.previous_page %}
+		<a href="#/page_{{ paginator.previous_page }}" class="prev">上一页</a>
+		{% else %}
+		<span class="prev">上一页</span>
+		{% endif %}
+		{% if paginator.next_page %}
+		<a href="#/page_{{ paginator.next_page }}" class="next">下一页</a>
+		{% else %}
+		<span class="next">下一页</span>
+		{% endif %}
+		<span class="page_number">当前第{{ paginator.page }}页，共{{ paginator.total_pages }}页</span>
+	</div>
 	<div class="clear"></div>
 </div>

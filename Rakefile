@@ -23,7 +23,7 @@ task :publish => [:generate] do
     system "git push origin master"
     system "mv -f _site/* #{tmp}"
     system "git checkout -B gh-pages"
-    system "rm -rf *.* css _*"
+    system "rm -rf *.* css img js _*"
     system "mv -f #{tmp}/* ."
     message = "Site updated at #{Time.now.utc}"
     system "git add -A"
