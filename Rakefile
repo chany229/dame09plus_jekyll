@@ -31,6 +31,7 @@ task :publish => [:generate] do
     system "git push origin gh-pages --force"
     system "git checkout master"
     system "git stash"
+    system "rm -rf #{tmp}/*"
     system "echo yolo"
 end
 
