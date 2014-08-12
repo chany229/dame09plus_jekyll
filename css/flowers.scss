@@ -53,6 +53,7 @@ hr {
   border-top: 1px dashed $pink;
   padding: 0;
   margin: 5px;
+  clear: both;
 }
 table, tr, td{
   vertical-align: top;
@@ -409,6 +410,7 @@ p.notice, p.alert {
 .left  { float: left; }
 .right { float: right; }
 .clear { clear: both; }
+.purple { color: $purple; }
 .loading {
   overflow: hidden;
   position: fixed;
