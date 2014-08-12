@@ -1,13 +1,18 @@
 
 <div id="filters">
 	<div id="categories" class="block">
+        <div class="right">分类</div>
+        <hr/>
 		<ul>
+            <li><a href="#/list/">全部</a></li>
 			{% for category in site.categories %}
 			<li><a href="{{ category[0] | prepend: '#/categories/' }}">{{ category[0] }}</a>({{ category[1].size }})</li>
 			{% endfor %}
 		</ul>
 	</div>
     <div id="tags" class="block">
+        <div class="right">标签</div>
+        <hr/>
         {% for tag in site.tags %}
         <span style="font-size: {{ tag[1].size/10.0 + 0.7 }}em;"><a>{{ tag[0] }}</a>({{ tag[1].size }})</span>
         {% endfor %}
