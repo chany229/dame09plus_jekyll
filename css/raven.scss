@@ -191,6 +191,8 @@ p.notice, p.alert {
 #face {
 	margin: 0 20px 20px;
 	border: 0px solid $yellow;
+  width: 200px;
+  height: 200px;
 }
 #music_player {
   margin: 40px 20px 20px;
@@ -202,7 +204,6 @@ p.notice, p.alert {
 #notice {
   width: 670px;
   padding: 20px;
-  margin-bottom: 20px;
 }
 #filters {
   float: left;
@@ -218,9 +219,22 @@ p.notice, p.alert {
     color: $yellow;
   }
 }
+#categories, #tags {
+  .title {
+    padding: 3px;
+    float: right;
+  }
+}
+#categories {
+  margin: 20px;
+  padding: 0 10px;
+  ul {
+    list-style-type: none;
+  }
+}
 #tags {
   margin: 20px;
-  padding: 15px 0;
+  padding: 0 10px 10px;
   text-align: center;
 }
 #keyword {
@@ -243,10 +257,24 @@ p.notice, p.alert {
   text-align: center;
   width: 450px;
 }
-.entry {
-  width: 450px;
-  padding: 20px 20px 0;
-  margin: 0 0 20px;
+.block.entry {
+  width: 470px;
+  padding: 10px 10px 0;
+  margin: 20px 0;
+}
+.block.title {
+  margin: 20px 0;
+  width: 470px;
+  padding: 10px;
+  .data {
+    font-size: 12px;
+    float: right;
+  }
+}
+.block.content {
+  margin: 20px 0;
+  width: 470px;
+  padding: 10px;
 }
 .article, .comments {
   padding: 0 0 20px;
