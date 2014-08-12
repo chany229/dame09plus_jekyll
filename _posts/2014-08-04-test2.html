@@ -10,12 +10,16 @@ tags: [test, try, 测试]
 <a class="clickme" onclick="clickme()">clickme</a>
 
 <script type="text/javascript">
+/*
 $(function(){
-    var clickme = function() {
-        alert("yeah!")
-    }
     $(".clickme").click(function(){
         alert("bind!")   
     })
 })
+*/
+(function($){
+    var clickme = function() {
+        alert("yeah!")
+    }
+})(jQuery)
 </script>
