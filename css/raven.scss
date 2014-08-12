@@ -47,6 +47,7 @@ hr {
   height: 1px;
   border: none;
   border-top: 1px solid #000;
+  clear: both;
 }
 table, tr, td{
   vertical-align: top;
@@ -220,21 +221,19 @@ p.notice, p.alert {
   }
 }
 #categories, #tags {
+  margin: 20px;
+  padding: 10px;
   .title {
     padding: 3px;
     float: right;
   }
 }
 #categories {
-  margin: 20px;
-  padding: 0 10px;
   ul {
     list-style-type: none;
   }
 }
 #tags {
-  margin: 20px;
-  padding: 0 10px 10px;
   text-align: center;
 }
 #keyword {
