@@ -11,8 +11,8 @@ permalink: /raven/
   <link rel="stylesheet" href="{{ "/css/raven.css" | prepend: site.baseurl }}">
 </head>
 <body>
+  {% include header.html %}
   <div id="container">
-    {% include header.html %}
 
     {% include side.html %}
 
@@ -23,6 +23,8 @@ permalink: /raven/
       <div class="clear"></div>
     </div>
 
+  </div>
+  <div id="footer-wrapper">
     {% include footer.html %}
   </div>
   {% include js.html %}
