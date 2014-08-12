@@ -4,7 +4,7 @@
         <div class="title">分类</div>
         <hr/>
 		<ul>
-            <li><a href="#/list/">全部</a></li>
+            <li><a href="#/list/">全部</a>({{ site.posts.size }})</li>
 			{% for category in site.categories %}
 			<li><a href="{{ category[0] | prepend: '#/categories/' }}">{{ category[0] }}</a>({{ category[1].size }})</li>
 			{% endfor %}
