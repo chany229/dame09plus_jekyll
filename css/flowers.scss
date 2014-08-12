@@ -239,7 +239,6 @@ p.notice, p.alert {
 #notice {
   width: 690px;
   padding: 20px;
-  margin-bottom: 20px;
   color: $yellow;
 }
 #filters {
@@ -356,6 +355,11 @@ p.notice, p.alert {
   width: 470px;
   padding: 10px;
   color: $lemon;
+  .data {
+    font-size: 12px;
+    float: right;
+    color: $pink;
+  }
 }
 .block.content {
   margin: 20px 0;
