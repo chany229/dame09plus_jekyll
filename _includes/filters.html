@@ -1,7 +1,7 @@
 
 <div id="filters">
 	<div id="categories" class="block">
-        <div class="right purple">分类</div>
+        <div class="title">分类</div>
         <hr/>
 		<ul>
             <li><a href="#/list/">全部</a></li>
@@ -10,8 +10,8 @@
 			{% endfor %}
 		</ul>
 	</div>
-    <div id="tags" class="block purple">
-        <div class="right">标签</div>
+    <div id="tags" class="block">
+        <div class="title">标签</div>
         <hr/>
         {% for tag in site.tags %}
         <span style="font-size: {{ tag[1].size/10.0 + 0.7 }}em;"><a>{{ tag[0] }}</a>({{ tag[1].size }})</span>
