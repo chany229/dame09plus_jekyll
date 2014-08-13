@@ -101,8 +101,8 @@ var FilterCtrl = ['$scope', '$location', function($scope, $location) {
         var path_arr = cur_path.split('/');
         console.log(path_arr);
 
-        path1 = path_arr[1];
-        path2 = path_arr[2];
+        var path1 = path_arr[1];
+        var path2 = path_arr[2];
         if (path1 == "tag" && path2 == tag) {
             return "current";
         } else {
@@ -116,8 +116,8 @@ var FilterCtrl = ['$scope', '$location', function($scope, $location) {
         var path_arr = cur_path.split('/');
         console.log(path_arr);
 
-        path1 = path_arr[1];
-        path2 = path_arr[2];
+        var path1 = path_arr[1];
+        var path2 = path_arr[2];
         if (path1 == "list" && category == "全部") {
             return "current";
         } else if ((path1 == "category" || path1 == "categories") && path2 == category) {
