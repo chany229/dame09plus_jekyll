@@ -1,16 +1,17 @@
 ---
 layout: none
-permalink: /raven/
+permalink: /mint_tears/
 ---
 <!DOCTYPE html>
 <html ng-app="my_routes">
 <head>
   {% include head_meta.html %}
-  <link rel="stylesheet" href="{{ "/css/raven.css" | prepend: site.baseurl }}">
+  <link href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "/css/mint_tears.css" | prepend: site.baseurl }}">
 </head>
 <body>
-  {% include header.html %}
   <div id="container">
+    {% include header.html %}
 
     {% include side.html %}
 
@@ -21,8 +22,6 @@ permalink: /raven/
       <div class="clear"></div>
     </div>
 
-  </div>
-  <div id="footer-wrapper">
     {% include footer.html %}
   </div>
   {% include js.html %}
