@@ -1,3 +1,5 @@
+@import "fixed";
+
 $yellow: #e7c547;
 $pink: #d54e53;
 $purple: #c397d8;
@@ -7,31 +9,13 @@ $lemon: #b9ca4a;
 $red: #f33;
 $orange: #e78c45;
 $block_radius: 5px;
-$hover_transition: color .50s linear, background-color .50s linear, border-color .50s linear;
-$pie_url: url(/PIE-2.0beta1/PIE.htc);
-
 $background-color: black;
 $left_background: #000;
 $right_background: #000;
 $font_color: $yellow;
 $link_color: $lemon;
-
-@mixin pie {
-  behavior: $pie_url;//url(/PIE_1.0.0/PIE.htc);
-}
-* {
-  margin: 0;
-  padding: 0;
-  &:hover {
-    -o-transition: $hover_transition;
-    -webkit-transition: $hover_transition;
-    -moz-transition: $hover_transition;
-    transition: $hover_transition;
-  }
-}
 body {
   color: $font_color;
-  font-family: 'microsoft yahei';
   background-color: $background-color;
 }
 a{
@@ -48,30 +32,19 @@ a{
 }
 span {display: inline-block;}
 hr {
-  height: 1px;
-  border: none;
   border-top: 1px dashed $pink;
-  padding: 0;
-  margin: 5px;
-  clear: both;
-}
-table, tr, td{
-  vertical-align: top;
-}
-table {
 }
 input[type=text],input[type=password],input[type=email],textarea{
+  @include pie;
   border-radius: 12px;
   -moz-border-radius: 12px;
   -o-border-radius: 12px;
   -webkit-border-radius: 12px;
   border: 0px solid $yellow;
   background-color: rgba(213, 78, 83, 0.5);
-  @include pie;
   color: $yellow;
-  margin: 0;
-  padding: 5px;
   &:focus{
+    @include pie;
     transition: border linear .2s,box-shadow linear .5s;
     -moz-transition: border linear .2s,-moz-box-shadow linear .5s;
     -o-transition: border linear .2s,-moz-box-shadow linear .5s;
@@ -82,16 +55,7 @@ input[type=text],input[type=password],input[type=email],textarea{
     -moz-box-shadow: 0 0 12px $pink;
     -o-box-shadow: 0 0 12px $pink;
     -webkit-box-shadow: 0 0 12px $pink;
-    @include pie;
   }
-}
-input[type=text],input[type=password],input[type=email]{
-  width: 120px;
-  height: 24px;
-}
-textarea {
-  width: 100%;
-  margin: 5px 0;
 }
 ::-webkit-input-placeholder { color: black; }
 ::-moz-placeholder { color: black; } /* firefox 19+ */
@@ -103,13 +67,9 @@ input:-moz-placeholder { color: black; }
 /*header&footer*/
 header, footer {
   border-color: $pink;
-  clear: both;
-  width: 100%;
   border-style: dashed;
 }
 header {
-  height: 30px;
-  padding: 5px 20px;
   border-radius: 0 0 20px 20px;
   border-width: 0 1px 1px 1px;
   @include pie;
@@ -127,56 +87,21 @@ header a, footer a {
   }
 }
 footer {
-  text-align:center;
-  //padding-top: 12px;
   border-radius: 20px 20px 0 0;
   @include pie;
   border-width: 1px 1px 0 1px;
-}
-#footer-wrapper {
- float: left;
- position: relative;
- width: 100%;
- padding-bottom: 9999px;
- margin-bottom: -9999px;
-}
-p.notice, p.alert {
-  color: #000;
-  margin: 0;
-  width: 100%;
-  height: 24px;
-  background-color: $yellow;
-  clear: both;
-}
-#login_link {
-  float: right;
-  font-size: 12px;
 }
 /*header&footer*/
 
 
 /*container*/
 #container {
-  overflow: hidden;
-  width: 950px;
-  margin: 0 auto;
 }
 #side, #content {
-  margin-bottom: -9999px;
-  padding-bottom: 9999px;
-  min-height: 600px;
-  float: left;
 }
 #side {
-  width: 240px;
-  //background-color: $pink;
-  //background-image: url(/img/bg01.png);
 }
 #content {
-  width: 710px;
-  //background-color: $purple;
-  padding-top: 20px;
-  //background-image: url(/img/bg02.png);
 }
 /*container*/
 
@@ -221,10 +146,6 @@ p.notice, p.alert {
   }
 }
 #face {
-  margin: 20px;
-  border: 0px solid $yellow;
-  width: 200px;
-  height: 200px;
 }
 #music_player {
   padding: 0;
@@ -237,13 +158,9 @@ p.notice, p.alert {
 
 /*content*/
 #notice {
-  width: 690px;
-  padding: 20px;
   color: $yellow;
 }
 #filters {
-  float: left;
-  width: 240px;
 }
 #calendar {
   margin: 0 20px;
@@ -280,30 +197,16 @@ p.notice, p.alert {
 }
 #categories, #tags {
   .title {
-    padding: 3px;
     color: $lemon;
-    float: right;
   }
   .current {
-    font-weight: bolder;
   }
 }
 #categories {
-  margin: 20px;
-  padding: 0 10px;
-  ul {
-    list-style-type: none;
-  }
 }
 #tags {
-  margin: 20px;
-  padding: 0 10px 10px;
-  text-align: center;
 }
 #keyword {
-  margin: 20px;
-  padding: 15px 5px;
-  text-align: center;
 }
 #content h1 {
   margin: 0px;
@@ -315,10 +218,7 @@ p.notice, p.alert {
   float: left;
 }
 #not_found {
-  padding: 200px 20px;
   color: $pink;
-  text-align: center;
-  width: 450px;
 }
 .block {
   border: 1px dashed $pink;
@@ -348,55 +248,32 @@ p.notice, p.alert {
   }
 }
 .block.entry {
-  width: 470px;
-  padding: 10px 10px 0;
-  margin: 20px 0;
   color: $lemon;
 }
 .block.title {
-  margin: 20px 0;
-  width: 470px;
-  padding: 10px;
   color: $lemon;
   .data {
-    font-size: 12px;
-    float: right;
     color: $pink;
   }
 }
 .block.content {
-  margin: 20px 0;
-  width: 470px;
-  padding: 10px;
   color: $yellow;
 }
 .article, .comments {
-  padding: 0 0 10px;
-  display: none;
-  clear: both;
 }
 .comments {
-  font-size: 12px;
 }
 .comment_error_msg {
   color: $pink;
 }
 .entry_links {
-  font-size: 11px;
-  padding: 10px 0;
   color: $pink;
 }
 #logs_info {
-  font-size: 14px;
-  margin-bottom: 20px;
-  width: 470px;
 }
 #filter_info, #total_info {
-  float: left;
-  margin-right:12px;
 }
 .pagination {
-  float: right;
 }
 /*content*/
 
@@ -419,31 +296,12 @@ p.notice, p.alert {
     color: $yellow;
   }
 }
-.margintb { margin: 5px 0; }
-.left  { float: left; }
-.right { float: right; }
-.clear { clear: both; }
-.purple { color: $purple; }
-.loading {
-  overflow: hidden;
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: white url('/img/loading.gif') 50% 50% no-repeat;
-  filter: alpha(opacity=80);
-  opacity: 0.7;
-}
 .keyword {
   color: $red;
 }
 .mini {
-  cursor: url('/img/zoomInCursor.png'), pointer;
 }
 .thumb {
-  cursor: url('/img/zoomOutCursor.png'), pointer;
 }
 
 /*classes*/
@@ -451,10 +309,7 @@ p.notice, p.alert {
 
 /*comments*/
 .comment {
-  /*border: 1px solid $pink;*/
   background-color: rgba(63,49,43,0.5);
-  padding: 5px;
-  margin: 5px 0;
   border-radius: $block_radius;
   -moz-border-radius: $block_radius;
   -webkit-border-radius: $block_radius;
@@ -476,25 +331,15 @@ p.notice, p.alert {
   }
 }
 .comment_username {
-  float: left;
 }
 .comment_datetime {
-  float: right;
 }
 .comment_body {
-  clear: both;
 }
 .comment_content {
-  width: 400px;
-  margin-left: 5px;
 }
 
 .error_explanation ul,.error_explanation ul li {
   color: $pink;
 }
 /*comments*/
-
-/*debugs*/
-#ClCache {
-  display: none;
-}
