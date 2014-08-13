@@ -1,12 +1,11 @@
-
-<div id="filters">
+<div id="filters" ng-controller="LoadCtrl">
 	<div id="categories" class="block">
         <div class="title">分类</div>
         <hr/>
 		<ul>
             <li ng-class="currentCategoryClass('全部')"><a href="#/list/">全部</a>({{ site.posts.size }})</li>
 			{% for category in site.categories %}
-			<li ng-class="currentCategoryClass('{{ category[0] }}')"><a href="{{ category[0] | prepend: '#/categories/' }}">{{ category[0] }}</a>({{ category[1].size }})</li>
+			<li ng-class="currentCategoryClass('{{ category[0] }}')"><a href="{{ category[0] | prepend: '#/category/' }}">{{ category[0] }}</a>({{ category[1].size }})</li>
 			{% endfor %}
 		</ul>
 	</div>
