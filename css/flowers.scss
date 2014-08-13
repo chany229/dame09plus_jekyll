@@ -43,6 +43,8 @@ input[type=text],input[type=password],input[type=email],textarea{
   border: 0px solid $yellow;
   background-color: rgba(213, 78, 83, 0.5);
   color: $yellow;
+  margin: 0;
+  padding: 5px;
   &:focus{
     @include pie;
     transition: border linear .2s,box-shadow linear .5s;
@@ -57,10 +59,12 @@ input[type=text],input[type=password],input[type=email],textarea{
     -webkit-box-shadow: 0 0 12px $pink;
   }
 }
-::-webkit-input-placeholder { color: black; }
-::-moz-placeholder { color: black; } /* firefox 19+ */
-:-ms-input-placeholder { color: black; } /* ie */
-input:-moz-placeholder { color: black; }
+input[type=text],input[type=password],input[type=email]{
+}
+textarea {
+  margin: 5px 0;
+}
+::-webkit-input-placeholder,::-moz-placeholder,:-ms-input-placeholder,input:-moz-placeholder { color: black; }
 /*body*/
 
 

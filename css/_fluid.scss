@@ -1,22 +1,9 @@
-$hover_transition: color .50s linear, background-color .50s linear, border-color .50s linear;
-$pie_url: url(/PIE-2.0beta1/PIE.htc);
-* {
-  margin: 0;
-  padding: 0;
-  &:hover {
-    -o-transition: $hover_transition;
-    -webkit-transition: $hover_transition;
-    -moz-transition: $hover_transition;
-    transition: $hover_transition;
-    behavior: $pie_url;
-  }
-}
+@import "common";
 html {
     width: 100%;
 }
 body {
     width: 100%;
-  font-family: 'microsoft yahei';
 }
 a{
   &:visited{
@@ -26,14 +13,10 @@ a{
   &:active{
   }
 }
-span {display: inline-block;}
+span {}
 hr {
-  height: 1px;
-  border: none;
-  clear: both;
 }
 table, tr, td{
-  vertical-align: top;
 }
 table {
 }
@@ -42,23 +25,15 @@ input[type=text],input[type=password],input[type=email],textarea{
   }
 }
 input[type=text],input[type=password],input[type=email]{
-  width: 120px;
-  height: 24px;
 }
 textarea {
-  width: 100%;
 }
-::-webkit-input-placeholder {}
-::-moz-placeholder {} /* firefox 19+ */
-:-ms-input-placeholder {} /* ie */
-input:-moz-placeholder {}
+::-webkit-input-placeholder,::-moz-placeholder,:-ms-input-placeholder,input:-moz-placeholder {}
 /*body*/
 
 
 /*header&footer*/
 header, footer {
-    width: 100%;
-    clear: both;
     display: block;
     vertical-align: bottom;
 }
@@ -66,7 +41,6 @@ header {
   height: 20px;
 }
 footer {
-    text-align:center;
 }
 /*header&footer*/
 
@@ -74,17 +48,13 @@ footer {
 /*container*/
 #container {
     width: 100%;
-    overflow: hidden;
   min-width: 1000px;
 }
 #side, #content {
-    margin-bottom: -9999px;
-    padding-bottom: 9999px;
   min-height: 600px;
   padding-top: 20px;
 }
 #side {
-    width: 240px;
     float: left;
 }
 #content {
@@ -103,8 +73,6 @@ footer {
 }
 #face {
     margin: 0 20px 20px;
-  width: 200px;
-  height: 200px;
 }
 #music_player {
   margin: 20px;
@@ -115,11 +83,8 @@ footer {
 /*content*/
 #notice {
   width: 670px;
-  padding: 20px;
 }
 #filters {
-  float: left;
-  width: 240px;
 }
 #calendar {
   margin: 0 20px;
@@ -133,55 +98,28 @@ footer {
   margin: 20px;
   padding: 0 10px 10px;
   .title {
-    padding: 3px;
-    float: right;
+  }
+  .current {
   }
 }
 #categories {
   ul {
-    list-style-type: none;
   }
 }
 #tags {
-  text-align: center;
 }
-#keyword {
-  margin: 20px;
-  padding: 15px 5px;
-  text-align: center;
-}
-#content h1 {
-    margin: 0px 0px 20px;
-}
-#canvas_body {
-    margin: 0 20px;
-}
+#keyword {}
 #entries {
-  float: left;
 }
 #not_found {
-  padding: 200px 20px;
-  text-align: center;
-  width: 450px;
+}
+.block {
 }
 .block.entry {
-  width: 470px;
-  padding: 10px 10px 0;
-  margin: 20px 0;
 }
 .block.title {
-  margin: 20px 0;
-  width: 470px;
-  padding: 10px;
-  .data {
-    font-size: 12px;
-    float: right;
-  }
 }
 .block.content {
-  margin: 20px 0;
-  width: 470px;
-  padding: 10px;
 }
 .article, .comments {
   padding: 0 0 20px;
@@ -189,93 +127,29 @@ footer {
   clear: both;
 }
 .comments {
-  font-size: 12px;
 }
 .comment_error_msg {
 }
 .entry_links {
-  font-size: 11px;
-  padding: 10px 0;
 }
 #logs_info {
-  font-size: 14px;
-  margin-bottom: 20px;
 }
 #filter_info, #total_info {
-  float: left;
-  margin-right:12px;
 }
 .pagination {
-  float: right;
 }
 /*content*/
 
 
-/*classes*/
-.btn {
-  &:hover{
-  }
-}
-.block {
-  a {
-    &:visited{
-    }
-    &:hover{
-    }
-    &:active{
-    }
-  }
-}
-.margintb { margin: 5px 0; }
-/*classes*/
-.left  { float: left; }
-.right { float: right; }
-.clear { clear: both; }
-.loading {
-  overflow: hidden;
-  position:   fixed;
-  z-index:    1000;
-  top:        0;
-  left:       0;
-  height:     100%;
-  width:      100%;
-  background: white url('/img/loading.gif') 50% 50% no-repeat;
-  filter: alpha(opacity=80);
-  opacity: 0.7;
-  behavior: $pie_url;
-}
-.keyword {
-}
-.mini {
-  cursor: url('/img/zoomInCursor.png'), pointer;
-}
-.thumb {
-  cursor: url('/img/zoomOutCursor.png'), pointer;
-}
-
-
+/*comments*/
 .comment {
 }
 .comment_username {
-  float: left;
 }
 .comment_datetime {
-  float: right;
 }
 .comment_body {
-  clear: both;
 }
 .comment_content {
-  width: 400px;
-  margin-left: 5px;
 }
-
-.error_explanation ul,.error_explanation ul li {
-}
-
-#crop_avatar_form { display: none; }
-
-/*debugs*/
-#ClCache {
-  display: none;
-}
+/*comments*/
