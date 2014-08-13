@@ -92,5 +92,22 @@ var LoadCtrl = ['$scope', '$routeParams', '$templateCache', function($scope, $ro
     } else {
         $scope.templateUrl = '/' + path1;
     }
-        
+
+    $scope.currentTagClass = function(tag) {
+        if (path1 == "tag" && path2 == tag) {
+            return "current";
+        } else {
+            return "";
+        }
+    }
+    
+    $scope.currentCategoryClass = function(category) {
+        if (path1 == "list" && category == "全部") {
+            return "current";
+        } else if ((path1 == "category" || path1 == "categories") && path2 == category) {
+            return "current";
+        } else {
+            return "";
+        }
+    }
 }];

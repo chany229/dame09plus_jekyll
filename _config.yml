@@ -21,3 +21,4 @@ gems: ['jekyll-sass']
 
 tag_page_layout: tag
 tag_page_dir: tag
+category_dir: category
