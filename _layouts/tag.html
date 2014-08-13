@@ -1,2 +1,6 @@
-{% for post in paginator.tags["测试"] %}
+---
+layout: nil
+---
+{% for post in page.posts %}
+{% include post.html %}
 {% endfor %}

@@ -17,4 +17,8 @@
         <span style="font-size: {{ tag[1].size/10.0 + 0.7 }}em;"><a>{{ tag[0] }}</a>({{ tag[1].size }})</span>
         {% endfor %}
     </div>
+
+    <div class="block">
+        {{ site | tag_cloud }}
+    </div>
 </div>

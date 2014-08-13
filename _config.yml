@@ -18,3 +18,6 @@ permalink: pretty
 # for plugins
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md']
 gems: ['jekyll-sass']
+
+tag_page_layout: tag
+tag_page_dir: tag
