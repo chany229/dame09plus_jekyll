@@ -1,8 +1,5 @@
 $hover_transition: color .50s linear, background-color .50s linear, border-color .50s linear;
 $pie_url: url(/PIE-2.0beta1/PIE.htc);
-@mixin pie {
-  behavior: $pie_url;
-}
 * {
   margin: 0;
   padding: 0;
@@ -11,17 +8,28 @@ $pie_url: url(/PIE-2.0beta1/PIE.htc);
     -webkit-transition: $hover_transition;
     -moz-transition: $hover_transition;
     transition: $hover_transition;
+    behavior: $pie_url;
   }
 }
+html {
+    width: 100%;
+}
 body {
+    width: 100%;
   font-family: 'microsoft yahei';
+}
+a{
+  &:visited{
+  }
+  &:hover{
+  }
+  &:active{
+  }
 }
 span {display: inline-block;}
 hr {
   height: 1px;
   border: none;
-  padding: 0;
-  margin: 5px;
   clear: both;
 }
 table, tr, td{
@@ -30,8 +38,8 @@ table, tr, td{
 table {
 }
 input[type=text],input[type=password],input[type=email],textarea{
-  margin: 0;
-  padding: 5px;
+  &:focus{
+  }
 }
 input[type=text],input[type=password],input[type=email]{
   width: 120px;
@@ -39,93 +47,102 @@ input[type=text],input[type=password],input[type=email]{
 }
 textarea {
   width: 100%;
-  margin: 5px 0;
 }
-::-webkit-input-placeholder { color: black; }
-::-moz-placeholder { color: black; } /* firefox 19+ */
-:-ms-input-placeholder { color: black; } /* ie */
-input:-moz-placeholder { color: black; }
+::-webkit-input-placeholder {}
+::-moz-placeholder {} /* firefox 19+ */
+:-ms-input-placeholder {} /* ie */
+input:-moz-placeholder {}
 /*body*/
 
 
 /*header&footer*/
 header, footer {
-  clear: both;
-  width: 100%;
+    width: 100%;
+    clear: both;
+    display: block;
+    vertical-align: bottom;
 }
 header {
-  height: 30px;
-  padding: 5px 20px;
+  height: 20px;
 }
 footer {
-  text-align:center;
+    text-align:center;
 }
 /*header&footer*/
 
 
 /*container*/
 #container {
-  overflow: hidden;
-  width: 950px;
-  margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+  min-width: 1000px;
 }
 #side, #content {
-  margin-bottom: -9999px;
-  padding-bottom: 9999px;
-  float: left;
+    margin-bottom: -9999px;
+    padding-bottom: 9999px;
+  min-height: 600px;
+  padding-top: 20px;
 }
 #side {
-  width: 240px;
+    width: 240px;
+    float: left;
 }
 #content {
-  width: 710px;
-  padding-top: 20px;
+    margin-left: 240px;
+    padding-left: 20px;
 }
 /*container*/
 
 
 /*side*/
+#side ul a {
+}
+#side ul li {
+}
+#side ul li.current, #side ul li:hover {
+}
 #face {
-  margin: 20px;
+    margin: 0 20px 20px;
   width: 200px;
   height: 200px;
 }
 #music_player {
-  padding: 0;
-  text-align: center;
-  margin: 20px 19px;
+  margin: 20px;
 }
 /*side*/
 
 
 /*content*/
 #notice {
-  width: 690px;
+  width: 670px;
   padding: 20px;
 }
 #filters {
   float: left;
   width: 240px;
 }
+#calendar {
+  margin: 0 20px;
+  padding: 20px 0;
+  table {
+    width: 200px;
+    text-align: center;
+  }
+}
 #categories, #tags {
+  margin: 20px;
+  padding: 0 10px 10px;
   .title {
     padding: 3px;
     float: right;
   }
-  .current {
-    font-weight: bolder;
-  }
 }
 #categories {
-  margin: 20px;
-  padding: 0 10px;
   ul {
     list-style-type: none;
   }
 }
 #tags {
-  margin: 20px;
-  padding: 0 10px 10px;
   text-align: center;
 }
 #keyword {
@@ -134,21 +151,18 @@ footer {
   text-align: center;
 }
 #content h1 {
-  margin: 0px;
+    margin: 0px 0px 20px;
 }
 #canvas_body {
-  margin: 0 20px;
+    margin: 0 20px;
 }
 #entries {
   float: left;
-  width: 470px;
 }
 #not_found {
   padding: 200px 20px;
   text-align: center;
   width: 450px;
-}
-.block {
 }
 .block.entry {
   width: 470px;
@@ -170,6 +184,9 @@ footer {
   padding: 10px;
 }
 .article, .comments {
+  padding: 0 0 20px;
+  display: none;
+  clear: both;
 }
 .comments {
   font-size: 12px;
@@ -183,7 +200,6 @@ footer {
 #logs_info {
   font-size: 14px;
   margin-bottom: 20px;
-  width: 470px;
 }
 #filter_info, #total_info {
   float: left;
@@ -197,22 +213,36 @@ footer {
 
 /*classes*/
 .btn {
+  &:hover{
+  }
+}
+.block {
+  a {
+    &:visited{
+    }
+    &:hover{
+    }
+    &:active{
+    }
+  }
 }
 .margintb { margin: 5px 0; }
+/*classes*/
 .left  { float: left; }
 .right { float: right; }
 .clear { clear: both; }
 .loading {
   overflow: hidden;
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  position:   fixed;
+  z-index:    1000;
+  top:        0;
+  left:       0;
+  height:     100%;
+  width:      100%;
   background: white url('/img/loading.gif') 50% 50% no-repeat;
   filter: alpha(opacity=80);
   opacity: 0.7;
+  behavior: $pie_url;
 }
 .keyword {
 }
@@ -223,13 +253,8 @@ footer {
   cursor: url('/img/zoomOutCursor.png'), pointer;
 }
 
-/*classes*/
 
-
-/*comments*/
 .comment {
-  padding: 5px;
-  margin: 5px 0;
 }
 .comment_username {
   float: left;
@@ -247,7 +272,8 @@ footer {
 
 .error_explanation ul,.error_explanation ul li {
 }
-/*comments*/
+
+#crop_avatar_form { display: none; }
 
 /*debugs*/
 #ClCache {
