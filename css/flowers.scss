@@ -284,6 +284,9 @@ p.notice, p.alert {
     color: $lemon;
     float: right;
   }
+  .current {
+    font-weight: bolder;
+  }
 }
 #categories {
   margin: 20px;

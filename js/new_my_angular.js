@@ -100,8 +100,8 @@ var FilterCtrl = ['$scope', '$location', function($scope, $location) {
     var path_arr = cur_path.split('/');
     console.log(path_arr);
     
-    path1 = path_arr[0];
-    path2 = path_arr[1];
+    path1 = path_arr[1];
+    path2 = path_arr[2];
 
     $scope.currentTagClass = function(tag) {
         if (path1 == "tag" && path2 == tag) {
