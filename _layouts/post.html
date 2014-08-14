@@ -19,6 +19,6 @@ layout: none
     {{ content }}
 </div>
 
-<div class="block comments">
-    <div duoshuo="{{ page.title }}"></div>
+<div class="block comments" ng-controller="duoshuo">
+    <div duoshuo data-thread-key="{{ page.title }}"></div>
 </div>
