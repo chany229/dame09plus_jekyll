@@ -20,5 +20,5 @@ layout: none
 </div>
 
 <div class="block comments">
-    <div class="ds-thread" data-thread-key="{{ page.title }}" data-title="{{ page.title }}" data-url="{{ page.url }}"></div>
+    <div class="ds-thread" data-thread-key="{{ page.title }}" data-title="{{ page.title }}" data-url="{{ page.url | prepend: site.baseurl }}"></div>
 </div>
