@@ -1,6 +1,6 @@
 var has_loading_template = '<div ng-include src="templateUrl"><div class="loading"></div></div>'
 
-angular.module('my_routes', []).
+angular.module('my_routes', ['ngDuoshuo']).
 config(['$routeProvider', function($routeProvider) {
     $routeProvider.
     when("/:path1", {
