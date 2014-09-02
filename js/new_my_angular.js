@@ -70,13 +70,13 @@ var LoadPageCtrl = ['$scope', '$rootScope', '$location', function($scope, $rootS
 }];
 var LoadCtrl = ['$scope', '$routeParams', '$templateCache', function($scope, $routeParams, $templateCache) {
     $templateCache.removeAll();
-    var path1 = $routeParams.path1;
-    var path2 = $routeParams.path2;
-    var path3 = $routeParams.path3;
-    var path4 = $routeParams.path4;
-    var path5 = $routeParams.path5;
-    var path6 = $routeParams.path6;
-    var path7 = $routeParams.path7;
+    var path1 = encodeURIComponent($routeParams.path1);
+    var path2 = encodeURIComponent($routeParams.path2);
+    var path3 = encodeURIComponent($routeParams.path3);
+    var path4 = encodeURIComponent($routeParams.path4);
+    var path5 = encodeURIComponent($routeParams.path5);
+    var path6 = encodeURIComponent($routeParams.path6);
+    var path7 = encodeURIComponent($routeParams.path7);
     if (path7) {
         $scope.templateUrl = '/' + path1 + '/'+ path2 + '/' + path3 + '/' + path4 + '/' + path5 + '/' + path6 + '/' + path7;
     } else if (path6) {
