@@ -1,0 +1,48 @@
+<div class="block title">
+    <div class="left">
+        test2
+    </div>
+    <div class="data">
+        
+        <a>test</a>
+        
+        <a>try</a>
+        
+        <a>测试</a>
+        
+        <a>秀吉</a>
+         |
+        Aug 4, 2014 |
+        <a>评论功能尚未开启</a>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<div class="block content">
+    此地建设中，请先移驾<a href="http://dame09.com">旧站</a>
+<a class="clickme" onclick="clickme()">clickme</a>
+
+<script type="text/javascript">
+
+$(function(){
+    $(".clickme").click(function(){
+        alert("bind!")   
+    })
+})
+
+(function($){
+    var clickme = function() {
+        alert("yeah!")
+    }
+})(jQuery)
+</script>
+</div>
+
+<div class="comments" ng-controller="duoshuo">
+    <!--h3 ng-show="responseJSON">当前用户数据:</h3>
+    <div class="response" ng-bind="responseJSON"></div-->
+    <div class="threads" ng-repeat="thread in threads">
+      <h3 ng-bind="thread.title" ng-show="thread.title !== ''"></h3>
+    </div>
+    <div duoshuo data-thread-key="test2"></div>
+</div>

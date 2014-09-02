@@ -1,30 +1,97 @@
----
-layout: none
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml" />
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
+    <title>马太目欢乐颂+</title>
+    <description>一个个人日记站</description>
+    <link>http://dame09.comhttp://dame09.com/</link>
+    <atom:link href="http://dame09.comhttp://dame09.com/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Tue, 02 Sep 2014 17:30:59 +0800</pubDate>
+    <lastBuildDate>Tue, 02 Sep 2014 17:30:59 +0800</lastBuildDate>
+    <generator>Jekyll v2.2.0</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>弹丸论破一代白金感想</title>
+        <description>&lt;a onclick=&quot;$('.hidden').show()&quot;&gt;点击展开剧透内容&lt;/a&gt;
+&lt;div class=&quot;hidden&quot; style=&quot;display:none&quot;&gt;
+先测试一下下啦诶嘿
+&lt;/div&gt;</description>
+        <pubDate>Tue, 02 Sep 2014 00:00:00 +0800</pubDate>
+        <link>http://dame09.comhttp://dame09.com/%E5%BC%B9%E4%B8%B8%E8%AE%BA%E7%A0%B4/2014/09/02/%B5%AF%CD%E8%C2%DB%C6%C6%D2%BB%B4%FA%B0%D7%BD%F0%B8%D0%CF%EB/</link>
+        <guid isPermaLink="true">http://dame09.comhttp://dame09.com/%E5%BC%B9%E4%B8%B8%E8%AE%BA%E7%A0%B4/2014/09/02/%B5%AF%CD%E8%C2%DB%C6%C6%D2%BB%B4%FA%B0%D7%BD%F0%B8%D0%CF%EB/</guid>
+        
+        <category>弹丸论破</category>
+        
+        <category>感想</category>
+        
+        <category>脑洞</category>
+        
+        <category>叶隐康比吕</category>
+        
+        
+        <category>弹丸论破</category>
+        
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>test2</title>
+        <description>此地建设中，请先移驾&lt;a href=&quot;http://dame09.com&quot;&gt;旧站&lt;/a&gt;
+&lt;a class=&quot;clickme&quot; onclick=&quot;clickme()&quot;&gt;clickme&lt;/a&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+$(function(){
+    $(&quot;.clickme&quot;).click(function(){
+        alert(&quot;bind!&quot;)   
+    })
+})
+
+(function($){
+    var clickme = function() {
+        alert(&quot;yeah!&quot;)
+    }
+})(jQuery)
+&lt;/script&gt;</description>
+        <pubDate>Mon, 04 Aug 2014 20:51:00 +0800</pubDate>
+        <link>http://dame09.comhttp://dame09.com/test/2014/08/04/test2/</link>
+        <guid isPermaLink="true">http://dame09.comhttp://dame09.com/test/2014/08/04/test2/</guid>
+        
+        <category>test</category>
+        
+        <category>try</category>
+        
+        <category>测试</category>
+        
+        <category>秀吉</category>
+        
+        
+        <category>test</category>
+        
+      </item>
+    
+      <item>
+        <title>test</title>
+        <description>此地建设中，请先移驾&lt;a href=&quot;http://dame09.com&quot;&gt;旧站&lt;/a&gt;
+&lt;a onclick=&quot;clickme()&quot;&gt;clickme&lt;/a&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+    function clickme() {
+        alert(&quot;yeah!&quot;)
+    }
+&lt;/script&gt;</description>
+        <pubDate>Sat, 02 Aug 2014 21:55:00 +0800</pubDate>
+        <link>http://dame09.comhttp://dame09.com/%E6%B5%8B%E8%AF%95/2014/08/02/test/</link>
+        <guid isPermaLink="true">http://dame09.comhttp://dame09.com/%E6%B5%8B%E8%AF%95/2014/08/02/test/</guid>
+        
+        <category>test</category>
+        
+        <category>try</category>
+        
+        <category>测试</category>
+        
+        
+        <category>测试</category>
+        
+      </item>
+    
   </channel>
 </rss>
