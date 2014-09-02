@@ -20,13 +20,13 @@ a{
   color: $blue;
   &:visited{
     color: $blue;
-}
-&:hover{
+  }
+  &:hover{
     color: $glass;
-}
-&:active{
+  }
+  &:active{
     color: $glass;
-}
+  }
 }
 span {display: inline-block;}
 hr {
@@ -55,7 +55,7 @@ input[type=text],input[type=password],input[type=email],textarea{
     -moz-box-shadow: 0 0 12px $light-pink;
     -o-box-shadow: 0 0 12px $light-pink;
     -webkit-box-shadow: 0 0 12px $light-pink;
-}
+  }
 }
 input[type=text],input[type=password],input[type=email]{
 }
@@ -79,13 +79,13 @@ header a, footer a {
   color: white;
   &:visited{
     color: white;
-}
-&:hover{
+  }
+  &:hover{
     color: $sand;
-}
-&:active{
+  }
+  &:active{
     color: $sand;
-}
+  }
 }
 footer {
   border-radius: 20px 20px 0 0;
@@ -97,7 +97,7 @@ footer {
 
 /*container*/
 #container {
-    background-color: white;
+  background-color: white;
 }
 #side, #content {
 }
@@ -160,26 +160,26 @@ footer {
   color: $deep-pink;
 }
 .block {
-    background-color: $glass;
-    border-radius: $block_radius;
-    -moz-border-radius: $block_radius;
-    -webkit-border-radius: $block_radius;
-    -ms-border-radius: $block_radius;
-    -o-border-radius: $block_radius;
+  background-color: $glass;
+  border-radius: $block_radius;
+  -moz-border-radius: $block_radius;
+  -webkit-border-radius: $block_radius;
+  -ms-border-radius: $block_radius;
+  -o-border-radius: $block_radius;
 
-    @include pie;
-    color: white;
-    a {
-        color: $deep-pink;
-        &:visited{
-          color: $deep-pink;
-      }
-      &:hover{
-          color: $light-pink;
-      }
-      &:active{
-          color: $light-pink;
-      }
+  @include pie;
+  color: white;
+  a {
+    color: $deep-pink;
+    &:visited{
+      color: $deep-pink;
+    }
+    &:hover{
+      color: $light-pink;
+    }
+    &:active{
+      color: $light-pink;
+    }
   }
 
 }
@@ -190,7 +190,7 @@ footer {
   color: white;
   .data {
     color: $yellow;
-}
+  }
 }
 .block.content {
   color: white;
@@ -229,7 +229,7 @@ footer {
   @include pie;
   &:hover{
     color: $yellow;
-}
+  }
 }
 .keyword {
 }
