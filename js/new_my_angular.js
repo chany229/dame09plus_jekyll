@@ -77,17 +77,17 @@ var LoadCtrl = ['$scope', '$routeParams', '$templateCache', function($scope, $ro
     var path5 = encodeURIComponent($routeParams.path5);
     var path6 = encodeURIComponent($routeParams.path6);
     var path7 = encodeURIComponent($routeParams.path7);
-    if (path7) {
+    if (path7 && path7 != "undefined") {
         $scope.templateUrl = '/' + path1 + '/'+ path2 + '/' + path3 + '/' + path4 + '/' + path5 + '/' + path6 + '/' + path7;
-    } else if (path6) {
+    } else if (path6 && path6 != "undefined") {
         $scope.templateUrl = '/' + path1 + '/'+ path2 + '/' + path3 + '/' + path4 + '/' + path5 + '/' + path6;
-    } else if (path5) {
+    } else if (path5 && path5 != "undefined") {
         $scope.templateUrl = '/' + path1 + '/'+ path2 + '/' + path3 + '/' + path4 + '/' + path5;
-    } else if (path4) {
+    } else if (path4 && path4 != "undefined") {
         $scope.templateUrl = '/' + path1 + '/'+ path2 + '/' + path3 + '/' + path4;
-    } else if (path3) {
+    } else if (path3 && path3 != "undefined") {
         $scope.templateUrl = '/' + path1 + '/'+ path2 + '/' + path3;
-    } else if (path2) {
+    } else if (path2 && path2 != "undefined") {
         $scope.templateUrl = '/' + path1 + '/'+ path2;
     } else {
         $scope.templateUrl = '/' + path1;
